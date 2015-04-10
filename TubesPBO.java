@@ -78,16 +78,27 @@ public class TubesPBO {
                     System.out.println(p.viewMember());
                     break;
                 case 6:
-                   
+                    System.out.println("Masukkan tanggal : ");
+                    String tgl = a1.next();
+                    System.out.println("Masukkan shift : ");
+                    int shift = a1.nextInt();
+                    System.out.println("Masukkan ID pemesan : ");
+                    String idpes = a1.next();
+                    Jadwal j = new Jadwal(tgl, shift, idpes);
+                    p.addJadwal(j)
                     break;
                 case 7:
-                   
+                    System.out.println("Masukkan ID jadwal yang ingin di hapus : ");
+                    String idjad = a1.next();
+                    p.removeJadwal(idjad);
                     break;
                 case 8:
-                    ;
+                    System.out.println("Masukkan ID jadwal yang dicari : ");
+                    String idja = a1.next();
+                    System.out.println(p.cariJadwal(idja));
                     break;
                 case 9:
-                    
+                    System.out.println(p.viewJadwal());
                     break;
                 case 10:
                     break;
